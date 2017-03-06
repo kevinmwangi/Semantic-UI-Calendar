@@ -12,6 +12,12 @@ Install using bower:
 bower install --save semantic-ui-calendar
 ```
 
+Install using npm:
+
+```
+npm install --save semantic-ui-calendar
+```
+
 Include javascript and css in html:
 
 ```html
@@ -91,6 +97,7 @@ The following settings are supported by this module:
     formatInput: true,    // format the input text upon input blur and module creation
     startCalendar: null,  // jquery object or selector for another calendar that represents the start date of a date range
     endCalendar: null,    // jquery object or selector for another calendar that represents the end date of a date range
+    multiMonth: 1,        // show multiple months when in 'day' mode
 
     // popup options ('popup', 'on', 'hoverable', and show/hide callbacks are overridden)
     popupOptions: {
@@ -153,7 +160,7 @@ The following settings are supported by this module:
     },
 
     // callback when date changes, return false to cancel the change
-    onChange: function (date, text) {
+    onChange: function (date, text, mode) {
     },
 
     // callback before show animation, return false to prevent show
@@ -197,6 +204,8 @@ The following settings are supported by this module:
       calendar: 'calendar',
       active: 'active',
       popup: 'ui popup',
+      grid: 'ui equal width grid',
+      column: 'column',
       table: 'ui celled center aligned unstackable table',
       prev: 'prev link',
       next: 'next link',
@@ -218,6 +227,7 @@ The following settings are supported by this module:
       focusDate: 'focusDate',
       startDate: 'startDate',
       endDate: 'endDate',
-      mode: 'mode'
+      mode: 'mode',
+      monthOffset: 'monthOffset'
     }
 ```
